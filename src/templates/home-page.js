@@ -23,7 +23,7 @@ export const HomePageTemplate = ({
       <meta name='description' content={meta_description} />
     </Helmet>
     <section className=''>
-      <video autoPlay poster={image}  muted loop id='myVideo'>
+      <video poster={image} muted loop id='myVideo'>
         <source src='/video/virarium.mp4' type='video/mp4' />
       </video>
     </section>
@@ -73,6 +73,7 @@ const HomePage = ({data}) => {
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
+      image={frontmatter.image}
       heading={frontmatter.heading}
       description={frontmatter.description}
       offerings={frontmatter.offerings}

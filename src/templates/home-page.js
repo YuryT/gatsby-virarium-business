@@ -23,7 +23,7 @@ export const HomePageTemplate = ({
       <meta name='description' content={meta_description} />
     </Helmet>
     <section className=''>
-      <video poster={image} muted loop id='myVideo'>
+      <video autoPlay poster={image} muted loop id='myVideo'>
         <source src='/video/virarium.mp4' type='video/mp4' />
       </video>
     </section>

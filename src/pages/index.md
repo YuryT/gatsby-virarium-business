@@ -7,7 +7,8 @@ meta_description: >-
   ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
   venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
   consectetur purus sit amet fermentum.
-heading: Lorem ipsum dolor sit amet
+image: /img/jumbotron.jpg
+heading: ViRarium клуб виртуальной реальности в Воронеже
 description: >-
   Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
   adipisci velit...

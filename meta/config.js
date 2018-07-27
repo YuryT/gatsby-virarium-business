@@ -1,9 +1,6 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 module.exports = {
-  siteTitle: 'Gatsby Starter Business', // Site title.
-  siteTitleAlt: 'Business', // Alternative site title for SEO.
+  siteTitle: 'Клуб виртуальной реальности ViRarium', // Site title.
+  siteTitleAlt: 'ViRarium', // Alternative site title for SEO.
   siteLogo: '/logos/logo-512x512.png', // Logo used for SEO and manifest.
   siteUrl: 'https://gatsby-starter-business.netlify.com', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.

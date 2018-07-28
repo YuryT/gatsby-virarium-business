@@ -35,12 +35,14 @@ export const PricingPageTemplate = ({
     <section className='section section--gradient'>
       <div className='container'>
         <div className='section'>
+          <h2 className='has-text-weight-semibold is-size-2'
+            style={{textAlign: 'center'}}
+          >
+            {pricing.heading}
+          </h2>
           <div className='columns'>
             <div className='column is-10 is-offset-1'>
               <div className='content'>
-                <h2 className='has-text-weight-semibold is-size-2'>
-                  {pricing.heading}
-                </h2>
                 <p className='is-size-5'>{pricing.description}</p>
                 <Pricing data={pricing.plans} />
               </div>
@@ -98,7 +100,7 @@ export const pricingPageQuery = graphql`
           description
           plans {
             description
-            items
+            duration
             plan
             price
           }

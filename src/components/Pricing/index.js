@@ -14,16 +14,14 @@ const Pricing = ({ data }) => (
         <div className='content'>
           <p className='is-size-5'>{data.description}</p>
 
-          <div className='columns bd-klmn-columns'>
+          <div className='columns'>
             {data.plans.map(price => (
-              <div key={price.plan}
-                   className='column bd-notification is-primary '>
-                <section className='section'
-                         style={{border: '1px solid #eaecee', height: '100%'}}>
-                  <h4 className='has-text-centered has-text-weight-semibold'>
+              <div key={price.plan} className='column'>
+                <section className='section' style={{border: '1px solid #eaecee', height: '100%'}}>
+                  <h4 className='title has-text-centered has-text-weight-semibold'>
                     {price.plan}
                   </h4>
-                  <h5 className=' has-text-centered is-size-5'>
+                  <h5 className='title has-text-centered is-size-5'>
                     Цена: {price.price}
                   </h5>
                   <p

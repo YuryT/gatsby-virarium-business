@@ -4,6 +4,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import  Header from '../components/Header'
 import Pricing from '../components/Pricing'
 
 export const PricingPageTemplate = ({
@@ -18,27 +19,11 @@ export const PricingPageTemplate = ({
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
     </Helmet>
-    <section className='hero is-primary is-bold'>
-      <div className='hero-body'>
-        <div className='container'>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='section'>
-                <h1 className='title'>
-                  {title}
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section className='section section--gradient'>
-      <div className='container'>
+    <Header title={title} />
         <Pricing data={pricing_solo} />
+      <div className='hero is-primary'>
         <Pricing data={pricing_group} />
       </div>
-    </section>
   </div>
 )
 

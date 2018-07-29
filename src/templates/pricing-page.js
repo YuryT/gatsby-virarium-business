@@ -10,7 +10,8 @@ export const PricingPageTemplate = ({
   title,
   meta_title,
   meta_description,
-  pricing,
+  pricing_solo,
+  pricing_group,
 }) => (
   <div>
     <Helmet>
@@ -34,21 +35,8 @@ export const PricingPageTemplate = ({
     </section>
     <section className='section section--gradient'>
       <div className='container'>
-        <div className='section'>
-          <h2 className='has-text-weight-semibold is-size-2'
-            style={{textAlign: 'center'}}
-          >
-            {pricing.heading}
-          </h2>
-          <div className='columns'>
-            <div className='column is-10 is-offset-1'>
-              <div className='content'>
-                <p className='is-size-5'>{pricing.description}</p>
-                <Pricing data={pricing.plans} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Pricing data={pricing_solo} />
+        <Pricing data={pricing_group} />
       </div>
     </section>
   </div>
@@ -58,7 +46,12 @@ PricingPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
-  pricing: PropTypes.shape({
+  pricing_solo: PropTypes.shape({
+    heading: PropTypes.string,
+    description: PropTypes.string,
+    plans: PropTypes.array,
+  }),
+  pricing_group: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
     plans: PropTypes.array,
@@ -73,7 +66,8 @@ const PricingPage = ({data}) => {
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
-      pricing={frontmatter.pricing}
+      pricing_solo={frontmatter.pricing_solo}
+      pricing_group={frontmatter.pricing_group}
     />
   )
 }
@@ -95,12 +89,20 @@ export const pricingPageQuery = graphql`
         title
         meta_title
         meta_description
-        pricing {
+        pricing_solo {
           heading
           description
           plans {
             description
-            duration
+            plan
+            price
+          }
+        }
+        pricing_group {
+          heading
+          description
+          plans {
+            description
             plan
             price
           }

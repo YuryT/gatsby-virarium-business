@@ -25,7 +25,7 @@ export const HomePageTemplate = ({
     <section className='hero is-primary is-bold video-placeholder'
       style={{backgroundImage: `url(${image})`}}
     >
-      <video autoPlay muted loop id='myVideo'>
+      <video autoPlay muted loop id='myVideo' style={{width: '100%'}}>
         <source src='/video/virarium.mp4' type='video/mp4' />
       </video>
     </section>
@@ -37,13 +37,12 @@ export const HomePageTemplate = ({
             <div className='column is-10 is-offset-1'>
               <div className='content'>
                 <div>
-                  <h3 className='has-text-weight-semibold is-size-2'>
-                    {heading}
-                  </h3>
-                  <p>{description}</p>
+                  <h1 className='title is-1'>{heading}</h1>
+                  <h2 className='subtitle'>{description}</h2>
                 </div>
+                <h3 className='title has-text-centered'>{offerings.description}</h3>
                 <Offerings gridItems={offerings.blurbs} />
-                <h2 className='has-text-weight-semibold is-size-2'>Testimonials</h2>
+                <h2 className='has-text-weight-semibold is-size-2'>Отзывы</h2>
                 <Testimonials testimonials={testimonials} />
               </div>
             </div>
@@ -61,6 +60,7 @@ HomePageTemplate.propTypes = {
   heading: PropTypes.string,
   description: PropTypes.string,
   offerings: PropTypes.shape({
+    description: PropTypes.string,
     blurbs: PropTypes.array,
   }),
   testimonials: PropTypes.array,
@@ -105,6 +105,7 @@ export const pageQuery = graphql`
         heading
         description
         offerings {
+          description
           blurbs {
             image
             text

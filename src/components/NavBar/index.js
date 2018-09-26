@@ -38,7 +38,7 @@ const NavBar = () => {
           <div className='navbar-item'>
             <div className='field is-grouped'>
               <p className='control'>
-                <a href='ttps://vk.com/virarium' target='_blank'>
+                <a href='https://vk.com/virarium' target='_blank'>
                   <img src={vk_logo} alt='vk' style={{ width: '50px' }} />
                 </a>
                 <a href='https://www.instagram.com/virarium_vr_club/' target='_blank'>

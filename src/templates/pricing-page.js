@@ -1,10 +1,7 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import  Header from '../components/Header'
+import Header from '../components/Header'
 import Pricing from '../components/Pricing'
 
 export const PricingPageTemplate = ({
@@ -20,10 +17,10 @@ export const PricingPageTemplate = ({
       <meta name='description' content={meta_description} />
     </Helmet>
     <Header title={title} />
-        <Pricing data={pricing_solo} />
-      <div className='hero is-primary'>
-        <Pricing data={pricing_group} />
-      </div>
+    <Pricing data={pricing_solo} />
+    <div className='hero is-primary'>
+      <Pricing data={pricing_group} />
+    </div>
   </div>
 )
 

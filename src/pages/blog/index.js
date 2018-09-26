@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 import Helmet from 'react-helmet'
 import PostCard from '../../components/PostCard'
-
+import VKNews from '../../components/News/VKNews'
 export default class BlogPage extends Component {
   render () {
     const {data} = this.props

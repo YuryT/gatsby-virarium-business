@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import logo from '../../img/logo.svg'
+import vk_logo from '../../img/vk-brands.svg'
+import instagram_logo from '../../img/instagram-brands.svg'
 
 const NavBar = () => {
   return (
@@ -19,13 +21,16 @@ const NavBar = () => {
       </div>
       <div className='navbar-menu' id='navMenu'>
         <div className='navbar-start'>
-          <Link className='navbar-item' to='/pricing'>
+          <Link className='navbar-item' to='/pricing' activeClassName="active-menu" >
                         Цены
           </Link>
-          <Link className='navbar-item' to='/about'>
-                        Акции
+          <Link className='navbar-item' to='/about' activeClassName="active-menu">
+                        Квесты
           </Link>
-          <Link className='navbar-item' to='/blog'>
+          <Link className='navbar-item' to='/about' activeClassName="active-menu">
+                        Фото
+          </Link>
+          <Link className='navbar-item' to='/news' activeClassName="active-menu">
                         Новости
           </Link>
         </div>
@@ -33,8 +38,15 @@ const NavBar = () => {
           <div className='navbar-item'>
             <div className='field is-grouped'>
               <p className='control'>
+                <a href='ttps://vk.com/virarium' target='_blank'>
+                  <img src={vk_logo} alt='vk' style={{ width: '50px' }} />
+                </a>
+                <a href='https://www.instagram.com/virarium_vr_club/' target='_blank'>
+                  <img src={instagram_logo} alt='vk' style={{ width: '50px' }} />
+                </a>
                 <Link
                   className='button is-primary is-outlined'
+                  activeClassName="active-menu"
                   to='/contact'>
                                     Контакты
                 </Link>

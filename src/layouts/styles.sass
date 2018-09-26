@@ -4,7 +4,7 @@ $primary: #0e4d8f
 $primary-invert: #ffffff
 
 nav
-  border-bottom: lightgray solid 0.1vmin
+  border-bottom: $primary solid 0.1vmin
 
 .content .taglist
   list-style: none
@@ -37,4 +37,8 @@ nav
   min-height: 30vw
   background-position: center
   background-repeat: no-repeat
+
+.active-menu
+  background-color: $primary
+  color: $primary-invert
 

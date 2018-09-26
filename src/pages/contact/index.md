@@ -1,20 +1,19 @@
 ---
 templateKey: 'contact-page'
-title: Contact Us
-subtitle: We'd Love To Help You, Feel Free To Drop A Mail
-meta_title: Contact Us | Gatsby Starter Business
+title: Контакты
+meta_title: Контакты | Virarium
 meta_description: >-
-  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-  venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-  consectetur purus sit amet fermentum.
+  Контакты Virarium. Contacts Virarium
 contacts:
-  - email: support@lorem.com
+  - email: virarium-vrn@yandex.ru
+    phone: '+79003096765'
+    title: Клуб виртуальной реальности ViRarium
+    schedule:
+      - c 11:00 - 20:00 Будни
+      - с 11:00 - 21:00 Суббота - Воскресение
     description: >-
-      Donec scelerisque magna nec condimentum porttitor. Aliquam vel diam sed diam luctus pretium. 
-      Sed quis egestas libero. Vestibulum nec venenatis ligula. 
-  - email: contact@lorem.com
-    description: >-
-      Fusce porttitor vulputate enim, nec blandit magna gravida et. Etiam et dignissim ligula. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Мы находимся по адресу: Плехановская ул. 28, Воронеж
+    map:
+      href: 'https://yandex.ru/maps/-/CBBZvGCyDA'
+      src: 'https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Ae8802d00d249a7af7f851e95fba2bcd213af653f02fd66bdbc9e9090113a56e4&amp;width=600&amp;height=450&amp;lang=ru_RU'
 ---

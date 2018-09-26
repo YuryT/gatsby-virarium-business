@@ -1,10 +1,7 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 import React, {Component} from 'react'
 import favicon from './img/favicon.ico'
 
-let inlinedStyles = ''
+let inlinedStyles = '';
 if (process.env.NODE_ENV === 'production') {
   try {
     /* eslint import/no-webpack-loader-syntax: off */
@@ -27,7 +24,7 @@ export default class HTML extends Component {
       )
     }
     return (
-      <html lang='en' className='has-navbar-fixed-top'>
+      <html lang='ru' className='has-navbar-fixed-top'>
         <head>
           <meta charSet='utf-8' />
           <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />

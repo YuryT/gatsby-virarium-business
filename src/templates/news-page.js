@@ -2,13 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
-import Contact from '../components/Contact/index'
+import VKNews from '../components/News/VKNews'
 
-export const ContactPageTemplate = ({
+export const NewsPageTemplate = ({
   title,
   meta_title,
   meta_description,
-  contacts,
 }) => {
   return (
     <div>
@@ -18,25 +17,13 @@ export const ContactPageTemplate = ({
       </Helmet>
       <Header title={title} />
       <section className='section'>
-        <div className='container'>
-          {contacts.map((contact, id) =>
-            <Contact
-              key={id}
-              title={contact.title}
-              email={contact.email}
-              description={contact.description}
-              map={contact.map}
-              phone={contact.phone}
-              schedule={contact.schedule}
-            />
-          )}
-        </div>
+        <VKNews />
       </section>
     </div>
   )
 }
 
-ContactPageTemplate.propTypes = {
+NewsPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
@@ -44,10 +31,10 @@ ContactPageTemplate.propTypes = {
 
 }
 
-const ContactPage = ({data}) => {
+const NewsPage = ({data}) => {
   const {frontmatter} = data.markdownRemark
   return (
-    <ContactPageTemplate
+    <NewsPageTemplate
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
@@ -56,7 +43,7 @@ const ContactPage = ({data}) => {
   )
 }
 
-ContactPage.propTypes = {
+NewsPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -64,27 +51,16 @@ ContactPage.propTypes = {
   }),
 }
 
-export default ContactPage
+export default NewsPage
 
-export const contactPageQuery = graphql`
-  query ContactPage($id: String!) {
+export const NewsPageQuery = graphql`
+  query NewsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         meta_title
         meta_description
         heading
-        contacts {
-          title
-          schedule
-          email
-          phone
-          description
-          map {
-          src
-          href
-          }
-        }
       }
     }
   }

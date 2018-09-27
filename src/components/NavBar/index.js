@@ -21,16 +21,16 @@ const NavBar = () => {
       </div>
       <div className='navbar-menu' id='navMenu'>
         <div className='navbar-start'>
-          <Link className='navbar-item' to='/pricing' activeClassName="active-menu" >
+          <Link className='navbar-item' to='/pricing' >
                         Цены
           </Link>
-          <Link className='navbar-item' to='/about' activeClassName="active-menu">
+          <Link className='navbar-item' to='/about' >
                         Квесты
           </Link>
-          <Link className='navbar-item' to='/about' activeClassName="active-menu">
+          <Link className='navbar-item' to='/about' >
                         Фото
           </Link>
-          <Link className='navbar-item' to='/news' activeClassName="active-menu">
+          <Link className='navbar-item' to='/news'>
                         Новости
           </Link>
         </div>

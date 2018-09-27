@@ -5,6 +5,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Offerings from '../components/Offerings'
+import Gallery from '../components/Photo/Gallery'
 import Testimonials from '../components/Testimonials'
 
 export const HomePageTemplate = ({
@@ -15,6 +16,7 @@ export const HomePageTemplate = ({
   offerings,
   meta_title,
   meta_description,
+  photos,
   testimonials,
 }) => (
   <div>
@@ -42,11 +44,25 @@ export const HomePageTemplate = ({
                 </div>
                 <h3 className='title has-text-centered'>{offerings.description}</h3>
                 <Offerings gridItems={offerings.blurbs} />
-                <h2 className='has-text-weight-semibold is-size-2'>Отзывы</h2>
-                <Testimonials testimonials={testimonials} />
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div className='container'>
+        <div className='section'>
+          <h2 className='has-text-weight-semibold is-size-2'>Фотогалерея</h2>
+          <Gallery photos={photos} />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div className='container'>
+        <div className='section'>
+          <h2 className='has-text-weight-semibold is-size-2'>Отзывы</h2>
+          <Testimonials testimonials={testimonials} />
         </div>
       </div>
     </section>
@@ -68,7 +84,8 @@ HomePageTemplate.propTypes = {
 }
 
 const HomePage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
+  const {frontmatter} = data.markdownRemark;
+  const photos = data.allImageSharp.edges;
 
   return (
     <HomePageTemplate
@@ -79,6 +96,7 @@ const HomePage = ({data}) => {
       heading={frontmatter.heading}
       description={frontmatter.description}
       offerings={frontmatter.offerings}
+      photos={photos}
       testimonials={frontmatter.testimonials}
     />
   )
@@ -114,6 +132,15 @@ export const pageQuery = graphql`
         testimonials {
           author
           quote
+        }
+      }
+    }
+    allImageSharp(filter: {id: {regex: "/photos/"}}) {
+      edges {
+        node {
+          sizes(maxWidth: 800) {
+            ...GatsbyImageSharpSizes
+          }
         }
       }
     }

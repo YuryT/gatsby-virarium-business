@@ -5,6 +5,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Content, {HTMLContent} from '../components/Content'
+import Gallery from '../components/Photo/Gallery'
 
 export const AboutPageTemplate = ({title, content, contentComponent}) => {
   const PageContent = contentComponent || Content
@@ -48,7 +49,7 @@ AboutPageTemplate.propTypes = {
 }
 
 const AboutPage = ({data}) => {
-  const {markdownRemark: post} = data
+  const {markdownRemark: post, allImageSharp} = data
 
   return (
     <div>
@@ -61,6 +62,7 @@ const AboutPage = ({data}) => {
         title={post.frontmatter.title}
         content={post.html}
       />
+      <Gallery photos={allImageSharp.edges} />
     </div>
   )
 }
@@ -73,13 +75,22 @@ export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-        meta_title
-        meta_description
+  markdownRemark(id: {eq: $id}) {
+    html
+    frontmatter {
+      title
+      meta_title
+      meta_description
+    }
+  }
+  allImageSharp(filter: {id: {regex: "/photos/"}}) {
+    edges {
+      node {
+        sizes(maxWidth: 800) {
+          ...GatsbyImageSharpSizes
+        }
       }
     }
   }
+}
 `

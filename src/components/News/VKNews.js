@@ -30,6 +30,6 @@ export default class VKNews extends Component {
   }
 
   render () {
-    return <div style={{margin: '0 auto', maxWidth: '800px'}} id='vk_groups' />
+    return <div style={{margin: '0 auto', maxWidth: '500px'}} id='vk_groups' />
   }
 }

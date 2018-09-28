@@ -53,7 +53,7 @@ export const HomePageTemplate = ({
     <section>
       <div className='container'>
         <div className='section'>
-          <h2 className='has-text-weight-semibold is-size-2'>Фотогалерея</h2>
+          <h2 className='title has-text-weight-semibold is-size-2 has-text-centered'>Фотогалерея</h2>
           <Gallery photos={photos} />
         </div>
       </div>
@@ -61,7 +61,7 @@ export const HomePageTemplate = ({
     <section>
       <div className='container'>
         <div className='section'>
-          <h2 className='has-text-weight-semibold is-size-2'>Отзывы</h2>
+          <h2 className='title has-text-weight-semibold is-size-2 has-text-centered'>Отзывы</h2>
           <Testimonials testimonials={testimonials} />
         </div>
       </div>

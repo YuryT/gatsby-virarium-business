@@ -27,9 +27,6 @@ const NavBar = () => {
           <Link className='navbar-item' to='/about' >
                         Квесты
           </Link>
-          <Link className='navbar-item' to='/about' >
-                        Фото
-          </Link>
           <Link className='navbar-item' to='/news'>
                         Новости
           </Link>

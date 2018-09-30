@@ -5,7 +5,7 @@ name: КВЕСТ «ОСОБОЕ МНЕНИЕ»
 cover: /img/quests/minority-report-cover.jpg
 photoFolder: 'photo/photo-minority/gallery'
 slug: 'quest-minority-report'
-order: 1
+order: 2
 meta_title: VR квест "Особое мнение"
 meta_description: >-
    Квест в виртуальной реальности "Особое мнение"

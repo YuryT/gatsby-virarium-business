@@ -28,7 +28,7 @@ export const QuestsPageTemplate = ({
       <section className='section'>
         <div className='container'>
           <div className='section'>
-            <div dangerouslySetInnerHTML={{ __html: description }} />
+            <div className='has-text-centered' dangerouslySetInnerHTML={{ __html: description }} />
             <div>
               {/* {details.map((d) => (
                 <div>
@@ -48,7 +48,7 @@ export const QuestsPageTemplate = ({
                   {q.node.excerpt}
                 </div>
                 <div className='has-text-centered'>
-                  <Link to={q.node.fields.slug} className="button is-primary is-outlined">
+                  <Link to={q.node.fields.slug} className='button is-primary is-outline'>
                     Подробнее
                   </Link>
                 </div>

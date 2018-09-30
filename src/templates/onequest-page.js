@@ -12,7 +12,6 @@ export const QuestTemplate = ({
   cover,
   meta_title,
   meta_desc,
-  tags,
   title,
   slug,
 }) => {
@@ -33,20 +32,10 @@ export const QuestTemplate = ({
           <div className='columns'>
             <div className='column is-10 is-offset-1'>
               <img src={cover} alt={title} />
-              <PostContent content={content} />
-              {tags && tags.length ? (
-                <div style={{marginTop: `4rem`}}>
-                  <h4>Tags</h4>
-                  <ul className='taglist'>
-                    {tags.map(tag => (
-                      <li key={tag + `tag`}>
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-              <hr/>
+              <div className='section'>
+                <PostContent content={content} />
+              </div>
+              <hr />
             </div>
           </div>
         </div>
@@ -74,7 +63,6 @@ const QuestPage = ({data}) => {
       cover={post.frontmatter.cover}
       meta_title={post.frontmatter.meta_title}
       meta_desc={post.frontmatter.meta_description}
-      tags={post.frontmatter.tags}
       title={post.frontmatter.title}
       slug={post.fields.slug}
     />
@@ -103,7 +91,6 @@ export const pageQuery = graphql`
         cover
         meta_title
         meta_description
-        tags
       }
     }
   }

@@ -52,7 +52,7 @@ export const ArticleTemplate = ({
               </div>
             ) : null}
             <hr />
-            <Share
+            {/*<Share
               title={title}
               slug={slug}
               excerpt={meta_desc}
@@ -61,7 +61,7 @@ export const ArticleTemplate = ({
             <Disqus
               title={title}
               slug={slug}
-            />
+            />*/}
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
 
-export const BirthdayPageTemplate = ({
+export const OtherServicesTemplate = ({
   title,
   meta_title,
   meta_description,
@@ -25,18 +25,18 @@ export const BirthdayPageTemplate = ({
   </div>
 )
 
-BirthdayPageTemplate.propTypes = {
+OtherServicesTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
   text: PropTypes.string,
 }
 
-const BirthdayPage = ({data}) => {
+const OtherServices = ({data}) => {
   const {frontmatter} = data.markdownRemark
 
   return (
-    <BirthdayPageTemplate
+    <OtherServicesTemplate
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
@@ -45,7 +45,7 @@ const BirthdayPage = ({data}) => {
   )
 }
 
-BirthdayPage.propTypes = {
+OtherServices.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -53,10 +53,10 @@ BirthdayPage.propTypes = {
   }),
 }
 
-export default BirthdayPage
+export default OtherServices
 
 export const birthdayPage = graphql`
-  query BirthdayPage($id: String!) {
+  query OtherServices($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

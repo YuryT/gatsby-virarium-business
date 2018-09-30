@@ -15,7 +15,13 @@ export const BirthdayPageTemplate = ({
       <meta name='description' content={meta_description} />
     </Helmet>
     <Header title={title} />
-    <div>{text}</div>
+    <section>
+      <div className='container'>
+        <div className='section'>
+          <div>{text}</div>
+        </div>
+      </div>
+    </section>
   </div>
 )
 

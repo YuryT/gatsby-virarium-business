@@ -8,12 +8,12 @@ module.exports = {
   siteRss: '/rss.xml',
   siteFBAppID: '', // FB Application ID for using app insights
   googleTagManagerID: '', // GTM tracking ID.
-  disqusShortname: 'gatsby-business-starter', // Disqus shortname.
-  userName: 'Vaibhav Sharma',
-  userTwitter: 'vaibhaved',
-  userLocation: 'Delhi NCR, India',
+  disqusShortname: 'Virarium', // Disqus shortname.
+  userName: 'Virarium',
+  userTwitter: 'virarium',
+  userLocation: 'TODO',
   userDescription: '',
   copyright: 'Copyright © 2018 ViRarium club.', // Copyright string for the footer of the website and RSS feed.
-  themeColor: '#00d1b2', // Used for setting manifest and progress theme colors.
+  themeColor: '#003a83', // Used for setting manifest and progress theme colors.
   backgroundColor: '#ffffff', // Used for setting manifest background color.
 }

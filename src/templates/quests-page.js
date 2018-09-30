@@ -48,7 +48,7 @@ export const QuestsPageTemplate = ({
                   {q.node.excerpt}
                 </div>
                 <div className='has-text-centered'>
-                  <Link to={q.node.fields.slug} className='button is-primary is-outline'>
+                  <Link to={q.node.fields.slug} className='button is-primary is-outlined'>
                     Подробнее
                   </Link>
                 </div>

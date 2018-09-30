@@ -30,14 +30,11 @@ const NavBar = () => {
           <Link className='navbar-item' to='/birthday'>
                         Дни рождения
           </Link>
-          <Link className='navbar-item' to='/news'>
+          <Link className='navbar-item' to='/other-services'>
                         Другие услуги
           </Link>
           <Link className='navbar-item' to='/blog'>
                         Новости
-          </Link>
-          <Link className='navbar-item' to='/news'>
-                        VKnewsfeed
           </Link>
         </div>
         <div className='navbar-end'>

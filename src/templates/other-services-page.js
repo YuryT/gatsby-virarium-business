@@ -2,48 +2,50 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
-import VKNews from '../components/News/VKNews'
 
-export const NewsPageTemplate = ({
+export const BirthdayPageTemplate = ({
   title,
   meta_title,
   meta_description,
-}) => {
-  return (
-    <div>
-      <Helmet>
-        <title>{meta_title}</title>
-        <meta name='description' content={meta_description} />
-      </Helmet>
-      <Header title={title} />
-      <section className='section'>
-        <VKNews />
-      </section>
-    </div>
-  )
-}
+  text,
+}) => (
+  <div>
+    <Helmet>
+      <title>{meta_title}</title>
+      <meta name='description' content={meta_description} />
+    </Helmet>
+    <Header title={title} />
+    <section>
+      <div className='container'>
+        <div className='section'>
+          <div>{text}</div>
+        </div>
+      </div>
+    </section>
+  </div>
+)
 
-NewsPageTemplate.propTypes = {
+BirthdayPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
-  contacts: PropTypes.array,
-
+  text: PropTypes.string,
 }
 
-const NewsPage = ({data}) => {
+const BirthdayPage = ({data}) => {
   const {frontmatter} = data.markdownRemark
+
   return (
-    <NewsPageTemplate
+    <BirthdayPageTemplate
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
-      contacts={frontmatter.contacts}
+      text={frontmatter.text}
     />
   )
 }
 
-NewsPage.propTypes = {
+BirthdayPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -51,16 +53,16 @@ NewsPage.propTypes = {
   }),
 }
 
-export default NewsPage
+export default BirthdayPage
 
-export const NewsPageQuery = graphql`
-  query NewsPage($id: String!) {
+export const birthdayPage = graphql`
+  query BirthdayPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         meta_title
         meta_description
-        heading
+        text
       }
     }
   }

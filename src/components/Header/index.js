@@ -19,10 +19,6 @@ const Header = ({title}) => {
       </div>
     </div>
   </section>)
- /* return (
-    <section className='hero is-primary is-bold header-virarium' style={{backgroundImage: `url(${jumbotron})`, minHeight: '20vh'}}>
-    </section>
-  )*/
 }
 
 Header.propTypes = {

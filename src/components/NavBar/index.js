@@ -24,11 +24,20 @@ const NavBar = () => {
           <Link className='navbar-item' to='/pricing' >
                         Цены
           </Link>
-          <Link className='navbar-item' to='/about' >
+          <Link className='navbar-item' to='/quests' >
                         Квесты
           </Link>
+          <Link className='navbar-item' to='/birthday'>
+                        Дни рождения
+          </Link>
           <Link className='navbar-item' to='/news'>
+                        Другие услуги
+          </Link>
+          <Link className='navbar-item' to='/blog'>
                         Новости
+          </Link>
+          <Link className='navbar-item' to='/news'>
+                        VKnewsfeed
           </Link>
         </div>
         <div className='navbar-end'>

@@ -1,12 +1,9 @@
 ---
 templateKey: 'home-page'
-title: Gatsby Starter Business
-meta_title: Home | Gatsby Starter Business
+title: ViRarium Клуб виртуальной реальности
+meta_title: ViRarium | Клуб виртуальной реальности
 meta_description: >-
-  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-  venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-  consectetur purus sit amet fermentum.
+  Virarium клуб виртуальной реальности. Отличное место для интересного времяпровождения.
 image: /img/jumbotron.jpg
 heading: ViRarium
 description: >-

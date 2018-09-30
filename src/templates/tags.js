@@ -18,7 +18,7 @@ class TagRoute extends Component {
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount}  ${
       totalCount === 1 ? 'новость' : 'новостей'
-    } с  тэгом “${tag}”`
+    } с  тегом “${tag}”`
 
     return (
       <div>

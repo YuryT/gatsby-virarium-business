@@ -43,5 +43,11 @@ pricing_group:
         игровые, образовательные, захватывающие дух, или просто красоты мира
       plan:  Выезд
       price:  от 8000 рублей
+    - description: >-
+        Увлекательная командная головоломка. Подробнее  в разделе
+        <a href='/quests' style='text-decoration: underline;'>Квесты </a>
+      hasLink: true
+      plan:  Квест
+      price:  2500-3500 рублей
 ---
 

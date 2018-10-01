@@ -2,6 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// TODO fix workaround for href in description
 const Pricing = ({ data }) => (
   <div className='section'>
     <h2 className='has-text-weight-semibold is-size-2'
@@ -24,8 +25,9 @@ const Pricing = ({ data }) => (
                   <h5 className='title has-text-centered is-size-5'>
                     Цена: {price.price}
                   </h5>
-                  <p
-                    className='has-text-weight-semibold'>{price.description}</p>
+                  <div className='has-text-weight-semibold'>
+                    <div dangerouslySetInnerHTML={{ __html: price.description }} />
+                  </div>
                 </section>
               </div>
             ))}

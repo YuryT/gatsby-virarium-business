@@ -5,9 +5,7 @@ meta_title: Контакты | Virarium
 meta_description: >-
   Контакты Virarium. Contacts Virarium
 contacts:
-  - email: virarium-vrn@yandex.ru
-    phone: '+79003096765'
-    title: Клуб виртуальной реальности ViRarium
+  - title: Клуб виртуальной реальности ViRarium
     schedule:
       - c 11:00 - 20:00 Будни
       - с 11:00 - 21:00 Суббота - Воскресение

@@ -16,4 +16,6 @@ module.exports = {
   copyright: 'Copyright © 2018 ViRarium club.', // Copyright string for the footer of the website and RSS feed.
   themeColor: '#003a83', // Used for setting manifest and progress theme colors.
   backgroundColor: '#ffffff', // Used for setting manifest background color.
+  email: 'virarium-vrn@yandex.ru',
+  phone: '+79003096765',
 }

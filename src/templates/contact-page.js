@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import Contact from '../components/Contact/index'
+import config from '../../meta/config'
 
 export const ContactPageTemplate = ({
   title,
@@ -23,10 +24,10 @@ export const ContactPageTemplate = ({
             <Contact
               key={id}
               title={contact.title}
-              email={contact.email}
+              email={config.email}
               description={contact.description}
               map={contact.map}
-              phone={contact.phone}
+              phone={config.phone}
               schedule={contact.schedule}
             />
           )}

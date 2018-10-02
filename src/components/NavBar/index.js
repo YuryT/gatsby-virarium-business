@@ -36,6 +36,9 @@ const NavBar = () => {
           <Link className='navbar-item' to='/blog'>
                         Новости
           </Link>
+          <Link className='navbar-item' to='/faq'>
+                        FAQ
+          </Link>
         </div>
         <div className='navbar-end'>
           <div className='navbar-item'>

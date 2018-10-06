@@ -10,7 +10,7 @@ contacts:
       - c 11:00 - 20:00 Будни
       - с 11:00 - 21:00 Суббота - Воскресение
     description: >-
-      Мы находимся по адресу: Плехановская ул. 28, Воронеж
+      Мы находимся по адресу: Плехановская ул. 28, Воронеж_checkTimeout
     map:
       href: 'https://yandex.ru/maps/-/CBBZvGCyDA'
       src: 'https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Ae8802d00d249a7af7f851e95fba2bcd213af653f02fd66bdbc9e9090113a56e4&amp;width=600&amp;height=450&amp;lang=ru_RU'

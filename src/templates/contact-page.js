@@ -78,8 +78,6 @@ export const contactPageQuery = graphql`
         contacts {
           title
           schedule
-          email
-          phone
           description
           map {
           src

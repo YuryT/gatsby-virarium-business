@@ -36,7 +36,7 @@ export const HomePageTemplate = ({
           <div className='columns'>
             <div className='column is-10 is-offset-1'>
               <div className='content'>
-                <div>
+                <div style={{textAlign: 'center'}}>
                   <h1 className='title is-1'>{heading}</h1>
                   <h2 className='subtitle'>{description}</h2>
                 </div>

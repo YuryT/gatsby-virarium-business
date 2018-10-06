@@ -4,7 +4,7 @@ title: ViRarium Клуб виртуальной реальности
 meta_title: ViRarium | Клуб виртуальной реальности
 meta_description: >-
   Virarium клуб виртуальной реальности. Отличное место для интересного времяпровождения.
-image: /img/video-poster.png
+image: /img/video-poster1.png
 heading: ViRarium
 description: >-
   Клуб виртуальной реальности в Воронеже

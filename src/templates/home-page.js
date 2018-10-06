@@ -24,10 +24,8 @@ export const HomePageTemplate = ({
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
     </Helmet>
-    <section className='hero is-primary is-bold video-placeholder'
-      style={{backgroundImage: `url(${image})`}}
-    >
-      <video autoPlay muted loop id='mainPageVideo' poster={image} style={{width: '100%'}}>
+    <section className='hero is-primary is-bold'>
+      <video id='mainPageVideo' poster={image} style={{width: '100%'}} controls>
         <source src='/video/virarium.mp4' type='video/mp4' />
       </video>
     </section>

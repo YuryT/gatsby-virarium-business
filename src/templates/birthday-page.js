@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
+import Gallery from '../components/Photo/Gallery'
 
 export const BirthdayPageTemplate = ({
   title,
   meta_title,
   meta_description,
   text,
+  photos,
 }) => (
   <div>
     <Helmet>
@@ -18,7 +20,20 @@ export const BirthdayPageTemplate = ({
     <section>
       <div className='container'>
         <div className='section'>
-          <div>{text}</div>
+          <div className='columns is-centered'>
+            <div dangerouslySetInnerHTML={{ __html: text }} className='column is-5'></div>
+            <div className='column is-5' style={{ textAlign: 'center' }}>
+              <img alt='cake image' src='/img/cake.svg' style={{width: '150px'}} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div className='container'>
+        <div className='section'>
+          <h2 className='title has-text-weight-semibold is-size-2 has-text-centered'>Фотогалерея</h2>
+          <Gallery photos={photos} maxWidth='300px' height='250px' />
         </div>
       </div>
     </section>
@@ -34,6 +49,7 @@ BirthdayPageTemplate.propTypes = {
 
 const BirthdayPage = ({data}) => {
   const {frontmatter} = data.markdownRemark
+  const photos = data.allImageSharp.edges
 
   return (
     <BirthdayPageTemplate
@@ -41,6 +57,7 @@ const BirthdayPage = ({data}) => {
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
       text={frontmatter.text}
+      photos={photos}
     />
   )
 }
@@ -63,6 +80,15 @@ export const birthdayPage = graphql`
         meta_title
         meta_description
         text
+      }
+    }
+    allImageSharp(filter: {id: {regex: "/birthday/gallery/"}}) {
+      edges {
+        node {
+          sizes(maxWidth: 800) {
+            ...GatsbyImageSharpSizes
+          }
+        }
       }
     }
   }

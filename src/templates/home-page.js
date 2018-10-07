@@ -1,6 +1,3 @@
-/**
- * Created by vaibhav on 31/3/18
- */
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
@@ -82,8 +79,8 @@ HomePageTemplate.propTypes = {
 }
 
 const HomePage = ({data}) => {
-  const {frontmatter} = data.markdownRemark;
-  const photos = data.allImageSharp.edges;
+  const {frontmatter} = data.markdownRemark
+  const photos = data.allImageSharp.edges
 
   return (
     <HomePageTemplate

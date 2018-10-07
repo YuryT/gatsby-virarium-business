@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Lightbox from 'react-images'
 
 class Gallery extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
+    const maxWidth = props.maxWidth ? props.maxWidth : '200px'
+    const height = props.height ? props.height : '200px'
     this.state = {
+      maxWidth,
+      height,
       shareOpen: false,
       anchorEl: null,
       lightbox: false,
       photos: props.photos.map(photo => Object.assign({ srcSet: photo.node.sizes.srcSet })),
-    };
+    }
   }
 
   gotoPrevLightboxImage() {
@@ -18,17 +23,17 @@ class Gallery extends Component {
     this.setState({ photo: photo - 1 });
   }
 
-  gotoNextLightboxImage() {
+  gotoNextLightboxImage () {
     const { photo } = this.state;
     this.setState({ photo: photo + 1 });
   }
 
-  openLightbox(photo, event) {
+  openLightbox (photo, event) {
     event.preventDefault();
     this.setState({ lightbox: true, photo });
   }
 
-  closeLightbox() {
+  closeLightbox () {
     this.setState({ lightbox: false });
   }
 
@@ -40,7 +45,7 @@ class Gallery extends Component {
           {photos.map((photo, i) => (
             <div className='column'  key={i} >
               <a href={photo.node.sizes.src} onClick={e => this.openLightbox(i, e)}>
-                <Img style={{maxWidth: '200px', height: '200px'}} sizes={photo.node.sizes} />
+                <Img style={{ maxWidth: this.state.maxWidth, height: this.state.height }} sizes={photo.node.sizes} />
               </a>
             </div>
           ))}
@@ -57,6 +62,11 @@ class Gallery extends Component {
       </section>
     );
   }
+}
+
+Gallery.propTypes = {
+  maxWidth: PropTypes.string,
+  height: PropTypes.string,
 }
 
 export default Gallery

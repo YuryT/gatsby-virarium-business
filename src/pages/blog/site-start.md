@@ -2,7 +2,7 @@
 templateKey: article-page
 title: Запуск сайта
 slug: site-start
-date: '2018-10-07T011:00:00+03:00'
+date: '2018-10-07T11:00:00+03:00'
 cover: /img/jumbotron.jpg
 tags:
   - новости клуба

@@ -23,7 +23,7 @@ export const HomePageTemplate = ({
     </Helmet>
     <section className='hero is-primary is-bold'>
       <video id='mainPageVideo' poster={image} style={{width: '100%'}} controls>
-        <source src='/video/virarium.mp4' type='video/mp4' />
+        <source src='/video/fast480.mp4' type='video/mp4' />
       </video>
     </section>
     <section className='section section--gradient'>

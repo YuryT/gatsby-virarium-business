@@ -9,6 +9,7 @@ export const BirthdayPageTemplate = ({
   meta_title,
   meta_description,
   text,
+  header,
   photos,
 }) => (
   <div>
@@ -20,6 +21,9 @@ export const BirthdayPageTemplate = ({
     <section>
       <div className='container'>
         <div className='section'>
+          <h4 className='title is-4 has-text-centered'>
+            {header}
+          </h4>
           <div className='columns is-centered'>
             <div dangerouslySetInnerHTML={{ __html: text }} className='column is-5'></div>
             <div className='column is-5' style={{ textAlign: 'center' }}>
@@ -32,7 +36,7 @@ export const BirthdayPageTemplate = ({
     <section>
       <div className='container'>
         <div className='section'>
-          <h2 className='title has-text-weight-semibold is-size-2 has-text-centered'>Фотогалерея</h2>
+          <h2 className='title has-text-weight-semibold is-size-2 has-text-centered'></h2>
           <Gallery photos={photos} maxWidth='300px' height='250px' />
         </div>
       </div>
@@ -45,6 +49,7 @@ BirthdayPageTemplate.propTypes = {
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
   text: PropTypes.string,
+  header: PropTypes.string,
 }
 
 const BirthdayPage = ({data}) => {
@@ -57,6 +62,7 @@ const BirthdayPage = ({data}) => {
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
       text={frontmatter.text}
+      header={frontmatter.header}
       photos={photos}
     />
   )
@@ -80,6 +86,7 @@ export const birthdayPage = graphql`
         meta_title
         meta_description
         text
+        header
       }
     }
     allImageSharp(filter: {id: {regex: "/birthday/gallery/"}}) {

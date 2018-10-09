@@ -10,6 +10,7 @@ export const PricingPageTemplate = ({
   meta_description,
   pricing_solo,
   pricing_group,
+  pricing_cert,
 }) => (
   <div>
     <Helmet>
@@ -20,6 +21,9 @@ export const PricingPageTemplate = ({
     <Pricing data={pricing_solo} />
     <div className='hero is-primary'>
       <Pricing data={pricing_group} />
+    </div>
+    <div className='hero'>
+      <Pricing data={pricing_cert} />
     </div>
   </div>
 )
@@ -38,6 +42,12 @@ PricingPageTemplate.propTypes = {
     description: PropTypes.string,
     plans: PropTypes.array,
   }),
+  pricing_cert: PropTypes.shape({
+    heading: PropTypes.string,
+    description: PropTypes.string,
+    plans: PropTypes.array,
+  }),
+
 }
 
 const PricingPage = ({data}) => {
@@ -50,6 +60,7 @@ const PricingPage = ({data}) => {
       meta_description={frontmatter.meta_description}
       pricing_solo={frontmatter.pricing_solo}
       pricing_group={frontmatter.pricing_group}
+      pricing_cert={frontmatter.pricing_cert}
     />
   )
 }
@@ -81,6 +92,15 @@ export const pricingPageQuery = graphql`
           }
         }
         pricing_group {
+          heading
+          description
+          plans {
+            description
+            plan
+            price
+          }
+        }
+        pricing_cert {
           heading
           description
           plans {

@@ -45,9 +45,26 @@ pricing_group:
       price:  от 8000 рублей
     - description: >-
         Увлекательная командная головоломка. Подробнее  в разделе
-        <a href='/quests' style='text-decoration: underline;'>Квесты </a>
+        <a href='/quests' style='text-decoration: underline;'>Квесты</a>
       hasLink: true
       plan:  Квест
       price:  2500-3500 рублей
+pricing_cert:
+  description: >-
+    Так же у нас можно приобрести подарочные сертификаты
+  heading: <p id='certificates'>Подарочные сертификаты</p>
+  plans:
+    - description: Для одного человека
+      plan: 60 минут
+      price: 500 рублей
+    - description: >-
+        Сертификат может использовать один человеку или двое по часу
+      plan:  2 часа
+      price: 5000 рублей
+    - description: >-
+        Сертификат может использовать один человек или двое, трое, четверо (кратно часу)
+      plan: 4 часа
+      price: 1600 рублей
 ---
+#certificates
 

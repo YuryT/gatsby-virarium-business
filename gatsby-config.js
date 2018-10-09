@@ -42,7 +42,9 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [],
+        plugins: [
+          'gatsby-remark-autolink-headers',
+        ],
       },
     },
     {
@@ -98,7 +100,7 @@ module.exports = {
         setup (ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata
           ret.allMarkdownRemark = ref.query.allMarkdownRemark
-          ret.generator = 'GatsbyJS Business Starter'
+          ret.generator = 'Virarium Club'
           return ret
         },
         query: `

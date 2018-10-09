@@ -6,10 +6,9 @@ import PropTypes from 'prop-types'
 const Pricing = ({ data }) => (
   <div className='section'>
     <h2 className='has-text-weight-semibold is-size-2'
-        style={{textAlign: 'center'}}
-    >
-      {data.heading}
-    </h2>
+      style={{textAlign: 'center'}}
+      dangerouslySetInnerHTML={{ __html: data.heading }}
+    />
     <div className='columns'>
       <div className='column is-10 is-offset-1'>
         <div className='content'>

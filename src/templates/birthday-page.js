@@ -25,9 +25,9 @@ export const BirthdayPageTemplate = ({
             {header}
           </h4>
           <div className='columns is-centered'>
-            <div dangerouslySetInnerHTML={{ __html: text }} className='column is-5'></div>
-            <div className='column is-5' style={{ textAlign: 'center' }}>
-              <img alt='cake image' src='/img/cake.svg' style={{width: '150px'}} />
+            <div dangerouslySetInnerHTML={{ __html: text }} className='column is-6'></div>
+            <div className='column is-6' style={{ textAlign: 'center' }}>
+              <img alt='cake image' src='/img/cake.svg' style={{width: '300px'}} />
             </div>
           </div>
         </div>

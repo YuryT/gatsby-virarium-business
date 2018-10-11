@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: 'Клуб виртуальной реальности ViRarium', // Site title.
   siteTitleAlt: 'ViRarium', // Alternative site title for SEO.
   siteLogo: '/logos/logo-512x512.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://gatsby-starter-business.netlify.com', // Domain of your website without pathPrefix.
+  siteUrl: 'https://virarium.ru/', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.
   siteDescription: 'Leverage Gatsby Business Starter for your Business.', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml',

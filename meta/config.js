@@ -18,4 +18,6 @@ module.exports = {
   backgroundColor: '#ffffff', // Used for setting manifest background color.
   email: 'virarium-vrn@yandex.ru',
   phone: '+79003096765',
+  vk: 'https://vk.com/virarium/',
+  instagram: 'https://www.instagram.com/virarium_vr_club/',
 }

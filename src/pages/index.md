@@ -7,7 +7,7 @@ meta_description: >-
 image: /img/video-poster-opt.png
 heading: Вирариум
 description: >-
-  Клуб виртуальной реальности в Воронеже
+  VR Клуб в Воронеже
 offerings:
   description: Почему вам стоит посетить наш клуб?
   blurbs:

@@ -28,6 +28,7 @@ export default class HTML extends Component {
         <head>
           <meta charSet='utf-8' />
           <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
+          <meta name='google-site-verification' content='UD9iO6GR7Rfe8gMkLb4lcG6xAgnfz8KYakAXMy6neMY' />
           {this.props.headComponents}
           <link rel='shortcut icon' href={favicon} />
           {css}

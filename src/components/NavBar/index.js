@@ -14,7 +14,7 @@ class NavBar extends Component {
       { to: '/quests', text: 'Квесты' },
       { to: '/birthday', text: 'Дни рождения' },
       { to: '/blog', text: 'Новости' },
-      { to: '/faq', text: 'FAQ' },
+      { to: '/faq', text: 'Вопросы и Ответы' },
     ]
     this.state = {
       menuIsActive: false,

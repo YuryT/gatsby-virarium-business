@@ -71,30 +71,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleAlt,
-        start_url: '/',
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'standalone',
-        icons: [
-          {
-            src: `/icons/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/icons/android-chrome-384x384.png`,
-            sizes: `384x384`,
-            type: `image/png`,
-          },
-        ],
-      },
-
-    },
-    {
       resolve: 'gatsby-plugin-feed',
       options: {
         setup (ref) {

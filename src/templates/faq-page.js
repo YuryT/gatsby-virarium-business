@@ -17,8 +17,8 @@ export const FAQTemplate = ({
     </Helmet>
     <Header title={title} />
     <section className="faqs" style={{marginTop:'30px'}}>
-      {faqs.map((f) => (
-        <article className='message is-primary'>
+      {faqs.map((f, index) => (
+        <article  key={index} className='message is-primary'>
           <div className='message-header'>
             <p>{f.question}</p>
           </div>

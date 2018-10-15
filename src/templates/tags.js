@@ -2,22 +2,16 @@ import React, {Component} from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import Header from '../components/Header'
+import PostCard from '../components/PostCard'
 
 class TagRoute extends Component {
   render () {
     const posts = this.props.data.allMarkdownRemark.edges
-    const postLinks = posts.map(post => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          <h2 className='is-size-2'>{post.node.frontmatter.title}</h2>
-        </Link>
-      </li>
-    ))
     const tag = this.props.pathContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount}  ${
-      totalCount === 1 ? 'новость' : 'новостей'
+      totalCount === 1 ? 'новость' : 'новости'
     } с  тегом “${tag}”`
 
     return (
@@ -32,9 +26,10 @@ class TagRoute extends Component {
                 style={{ marginBottom: '6rem' }}
               >
                 <h3 className='title is-size-4 is-bold-light'>{tagHeader}</h3>
-                <ul className='taglist'>{postLinks}</ul>
+                <PostCard posts={posts} />
+                <br />
                 <p>
-                  <Link to='/tags/'>Browse all tags</Link>
+                  <Link to='/tags/'>Показать все теги</Link>
                 </p>
               </div>
             </div>
@@ -62,11 +57,16 @@ export const tagPageQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt(pruneLength: 400)
+          id
           fields {
             slug
           }
           frontmatter {
             title
+            cover
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

@@ -13,6 +13,7 @@ class NavBar extends Component {
       { to: '/pricing', text: 'Цены' },
       { to: '/quests', text: 'Квесты' },
       { to: '/birthday', text: 'Дни рождения' },
+      { to: '/business', text: 'VR для организаций' },
       { to: '/blog', text: 'Новости' },
       { to: '/faq', text: 'Вопросы и Ответы' },
     ]

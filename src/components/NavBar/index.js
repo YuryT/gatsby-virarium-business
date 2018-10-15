@@ -26,9 +26,11 @@ class NavBar extends Component {
 
   closeMenu () {
     const $navMenu = document.getElementById('navMenu')
+    const $navButtons = document.getElementsByClassName('navbar-burger')
     // check in ie
-    if ($navMenu.classList.remove) {
+    if ($navMenu.classList.remove && $navButtons.length === 1) {
       $navMenu.classList.remove('is-active')
+      $navButtons[0].classList.remove('is-active')
     }
   }
 

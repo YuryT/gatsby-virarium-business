@@ -23,7 +23,7 @@ export const BusinessPageTemplate = ({
         <title>{meta_title}</title>
         <meta name='description' content={meta_description}/>
       </Helmet>
-      <Header title={title}/>
+      <Header title={title} />
       <section>
         <div className='container'>
           <div className='section'>
@@ -49,7 +49,7 @@ export const BusinessPageTemplate = ({
                 <div className='column  has-text-centered'>
                   <div className='columns is-centered'>
                     <div className='column is-10'>
-                      <Img style={{ width: '500px', height: '250px' }} sizes={s.photo.node.sizes} />
+                      <Img style={{ maxWidth: '500px', maxHeight: '250px' }} sizes={s.photo.node.sizes} />
                     </div>
                   </div>
                 </div>

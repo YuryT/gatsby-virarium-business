@@ -69,7 +69,7 @@ class NavBar extends Component {
                   </a>
                   <Link
                     className='button is-primary is-outlined'
-                    activeClassName="active-menu"
+                    onClick={this.closeMenu}
                     to='/contact'>
                     Контакты
                   </Link>

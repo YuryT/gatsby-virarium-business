@@ -1,20 +1,18 @@
-/**
- * Created by vaibhav on 31/3/18
- */
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import Helmet from 'react-helmet'
+import Layout from '../../components/layout'
 import PostCard from '../../components/PostCard'
 import Header from '../../components/Header'
 
 export default class BlogPage extends Component {
   render () {
-    const {data} = this.props
-    const {edges: posts} = data.allMarkdownRemark
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div>
+      <Layout>
         <Helmet>
           <title> Новости | VR клуб ViRarium </title>
         </Helmet>
@@ -22,7 +20,7 @@ export default class BlogPage extends Component {
         <section className='section'>
           <PostCard posts={posts} />
         </section>
-      </div>
+      </Layout>
     )
   }
 }

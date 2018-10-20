@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
+import Layout from '../components/layout'
 import Header from '../components/Header'
 import Gallery from '../components/Photo/Gallery'
 
@@ -16,10 +17,10 @@ export const QuestsPageTemplate = ({
   questArticles,
 }) => {
   questArticles.forEach((q) => {
-    q.photos = photos.filter((p) => p.node.id.indexOf(q.node.frontmatter.photoFolder) !== -1)
+    q.photos = photos[q.node.frontmatter.photoFolder]
   })
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>{meta_title}</title>
         <meta name='description' content={meta_description} />
@@ -36,11 +37,11 @@ export const QuestsPageTemplate = ({
                 </div>
               ))} */}
             </div>
-            {questArticles.map((q) => (
-              <div className='section'>
+            {questArticles.map((q, index) => (
+              <div  key={index} className='section'>
                 <h3 className='subtitle has-text-centered'>{q.node.frontmatter.name}</h3>
                 <div className='columns is-centered'>
-                  <div className='column is-half-desktop'>
+                  <div className='column is-8-desktop'>
                     <Gallery photos={q.photos} />
                   </div>
                 </div>
@@ -57,7 +58,7 @@ export const QuestsPageTemplate = ({
           </div>
         </div>
       </section>
-    </div>
+    </Layout>
   )
 }
 
@@ -71,9 +72,12 @@ QuestsPageTemplate.propTypes = {
 
 }
 
-const QuestsPage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
-  const photos = data.allImageSharp.edges
+const QuestsPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
+  const photos = {
+    minorityImages: data.minorityImages.edges,
+    valkyrieImages: data.valkyrieImages.edges,
+  }
   const questArticles = data.allMarkdownRemark.edges
   return (
     <QuestsPageTemplate
@@ -114,12 +118,20 @@ export const questsPageQuery = graphql`
         description
       }
     }
-    allImageSharp(filter: {id: {regex: "/quests/"}}) {
+    minorityImages: allImageSharp(filter: {fluid: {originalName: {regex: "/quest-minority-photo/"}}}){
       edges {
         node {
-          id
-          sizes(maxWidth: 650) {
-            ...GatsbyImageSharpSizes
+          fluid(maxWidth: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    valkyrieImages: allImageSharp(filter: {fluid: {originalName: {regex: "/valkyrie-minority-photo/"}}}){
+      edges {
+        node {
+          fluid(maxWidth: 650) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

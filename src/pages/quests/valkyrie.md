@@ -3,7 +3,7 @@ templateKey: onequest-page
 title: VR квест "Ледянная Валькирия"
 name: КВЕСТ «ЛЕДЯНАЯ ВАЛЬКИРИЯ»
 cover: '/img/quests/valkyrie-cover.jpg'
-photoFolder: 'photo/photo-valkyrie/gallery'
+photoFolder: 'valkyrieImages'
 slug: quest-valkyrie
 order: 1
 meta_title: VR квест "Ледянная Валькирия"

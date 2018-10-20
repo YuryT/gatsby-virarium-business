@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 import Header from '../components/Header'
-import Gallery from '../components/Photo/Gallery'
 import Img from 'gatsby-image'
 
 export const BusinessPageTemplate = ({
@@ -15,10 +15,10 @@ export const BusinessPageTemplate = ({
   photos,
 }) => {
   services.forEach((s) => {
-    s.photo = photos.find((p) => p.node.sizes.originalName === s.image)
+    s.photo = photos.find((p) => p.node.fluid.originalName === s.image)
   })
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>{meta_title}</title>
         <meta name='description' content={meta_description}/>
@@ -49,17 +49,16 @@ export const BusinessPageTemplate = ({
                 <div className='column  has-text-centered'>
                   <div className='columns is-centered'>
                     <div className='column is-10'>
-                      <Img style={{ maxWidth: '500px', maxHeight: '250px' }} sizes={s.photo.node.sizes} />
+                      <Img style={{ maxWidth: '500px', maxHeight: '250px' }} fluid={s.photo.node.fluid} />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-
         </div>
       </section>
-    </div>
+    </Layout>
   )
 }
 
@@ -115,11 +114,11 @@ export const businessPage = graphql`
         }
       }
     }
-    allImageSharp(filter: {id: {regex: "/business/gallery/"}}) {
+    allImageSharp(filter: {fluid: {originalName: {regex: "/business-gallery-/"}}}) {
       edges {
         node {
-          sizes(maxWidth: 800) {
-            ...GatsbyImageSharpSizes
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
             originalName
           }
         }

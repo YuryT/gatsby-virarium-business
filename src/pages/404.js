@@ -2,9 +2,10 @@
  * Created by vaibhav on 31/3/18
  */
 import React from 'react'
+import Layout from '../components/layout'
 
 const NotFoundPage = () => (
-  <div>
+  <Layout>
     <section className='hero is-primary is-bold is-large'>
       <div className='hero-body'>
         <div className='container'>
@@ -24,7 +25,7 @@ const NotFoundPage = () => (
         </div>
       </div>
     </section>
-  </div>
+  </Layout>
 )
 
 export default NotFoundPage

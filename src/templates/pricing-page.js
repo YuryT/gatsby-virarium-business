@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 import Header from '../components/Header'
 import Pricing from '../components/Pricing'
 
@@ -12,7 +13,7 @@ export const PricingPageTemplate = ({
   pricing_group,
   pricing_cert,
 }) => (
-  <div>
+  <Layout>
     <Helmet>
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
@@ -25,7 +26,7 @@ export const PricingPageTemplate = ({
     <div className='hero'>
       <Pricing data={pricing_cert} />
     </div>
-  </div>
+  </Layout>
 )
 
 PricingPageTemplate.propTypes = {

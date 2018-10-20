@@ -1,13 +1,13 @@
-import React,  { Component } from 'react'
+import React, { Component } from 'react'
 
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import logo from '../../img/logo.svg'
 import vk_logo from '../../img/vk-brands.svg'
 import instagram_logo from '../../img/instagram-brands.svg'
 import config from '../../../meta/config'
 
 class NavBar extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     const simpleLinks = [
       { to: '/pricing', text: 'Цены' },
@@ -21,16 +21,16 @@ class NavBar extends Component {
       menuIsActive: false,
       simpleLinks,
     }
-    this.closeMenu = this.closeMenu.bind(this)
+    this.toggleMenu = this.toggleMenu.bind(this)
   }
 
-  closeMenu () {
+  toggleMenu () {
     const $navMenu = document.getElementById('navMenu')
     const $navButtons = document.getElementsByClassName('navbar-burger')
     // check in ie
-    if ($navMenu.classList.remove && $navButtons.length === 1) {
-      $navMenu.classList.remove('is-active')
-      $navButtons[0].classList.remove('is-active')
+    if ($navMenu.classList.toggle && $navButtons.length === 1) {
+      $navMenu.classList.toggle('is-active')
+      $navButtons[0].classList.toggle('is-active')
     }
   }
 
@@ -43,7 +43,7 @@ class NavBar extends Component {
               <img src={logo} alt='ViRarium' style={{width: '125px'}} />
             </figure>
           </Link>
-          <button className='button navbar-burger' data-target='navMenu'>
+          <button className='button navbar-burger' data-target='navMenu' onClick={this.toggleMenu}>
             <span />
             <span />
             <span />
@@ -52,7 +52,7 @@ class NavBar extends Component {
         <div className='navbar-menu' id='navMenu'>
           <div className='navbar-start'>
             {this.state.simpleLinks.map((l, index) => (
-              <Link key={index} className='navbar-item' to={l.to} onClick={this.closeMenu} >
+              <Link key={index} className='navbar-item' to={l.to} onClick={this.toggleMenu} >
                 {l.text}
               </Link>
             ))}
@@ -69,7 +69,7 @@ class NavBar extends Component {
                   </a>
                   <Link
                     className='button is-primary is-outlined'
-                    onClick={this.closeMenu}
+                    onClick={this.toggleMenu}
                     to='/contact'>
                     Контакты
                   </Link>

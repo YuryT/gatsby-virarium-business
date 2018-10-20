@@ -14,7 +14,7 @@ class Gallery extends Component {
       shareOpen: false,
       anchorEl: null,
       lightbox: false,
-      photos: props.photos.map(photo => Object.assign({ srcSet: photo.node.sizes.srcSet })),
+      photos: props.photos.map(photo => Object.assign({ srcSet: photo.node.fluid.srcSet })),
     }
   }
 
@@ -41,11 +41,11 @@ class Gallery extends Component {
     const { photos } = this.props;
     return (
       <section>
-        <div className='columns is-gapless is-mobile'>
+        <div className='columns is-mobile is-variable is-0-mobile'>
           {photos.map((photo, i) => (
             <div className='column'  key={i} >
-              <a href={photo.node.sizes.src} onClick={e => this.openLightbox(i, e)}>
-                <Img style={{ maxWidth: this.state.maxWidth, height: this.state.height }} sizes={photo.node.sizes} />
+              <a href={photo.node.fluid.src} onClick={e => this.openLightbox(i, e)}>
+                <Img style={{ maxWidth: this.state.maxWidth, height: this.state.height }} fluid={photo.node.fluid} />
               </a>
             </div>
           ))}

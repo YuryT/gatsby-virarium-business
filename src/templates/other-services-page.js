@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 import Header from '../components/Header'
 
 export const OtherServicesTemplate = ({
@@ -9,7 +10,7 @@ export const OtherServicesTemplate = ({
   meta_description,
   text,
 }) => (
-  <div>
+  <Layout>
     <Helmet>
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
@@ -22,7 +23,7 @@ export const OtherServicesTemplate = ({
         </div>
       </div>
     </section>
-  </div>
+  </Layout>
 )
 
 OtherServicesTemplate.propTypes = {

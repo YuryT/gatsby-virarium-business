@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 import Offerings from '../components/Offerings'
 import Gallery from '../components/Photo/Gallery'
 import Testimonials from '../components/Testimonials'
+import { StaticQuery, graphql } from 'gatsby'
 
 export const HomePageTemplate = ({
   title,
@@ -16,7 +18,7 @@ export const HomePageTemplate = ({
   photos,
   testimonials,
 }) => (
-  <div>
+  <Layout>
     <Helmet>
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
@@ -61,7 +63,7 @@ export const HomePageTemplate = ({
         </div>
       </div>
     </section>
-  </div>
+  </Layout>
 )
 
 HomePageTemplate.propTypes = {
@@ -130,11 +132,11 @@ export const pageQuery = graphql`
         }
       }
     }
-    allImageSharp(filter: {id: {regex: "/photos/"}}) {
+    allImageSharp(filter: {fluid: {originalName: {regex: "/general-photo/"}}}) {
       edges {
         node {
-          sizes(maxWidth: 800) {
-            ...GatsbyImageSharpSizes
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

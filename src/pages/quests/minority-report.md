@@ -3,7 +3,7 @@ templateKey: onequest-page
 title: VR квест "Ледянная Валькирия"
 name: КВЕСТ «ОСОБОЕ МНЕНИЕ»
 cover: /img/quests/minority-report-cover.jpg
-photoFolder: 'photo/photo-minority/gallery'
+photoFolder: 'minorityImages'
 slug: 'quest-minority-report'
 order: 2
 meta_title: VR квест "Особое мнение"

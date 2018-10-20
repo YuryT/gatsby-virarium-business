@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
+import Layout from '../components/layout'
 import Header from '../components/Header'
 import PostCard from '../components/PostCard'
 
 class TagRoute extends Component {
   render () {
     const posts = this.props.data.allMarkdownRemark.edges
-    const tag = this.props.pathContext.tag
+    const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const tagHeader = `${totalCount}  ${
@@ -15,7 +16,7 @@ class TagRoute extends Component {
     } с  тегом “${tag}”`
 
     return (
-      <div>
+      <Layout>
         <Header title='Новости' />
         <section className='section'>
           <Helmet title={`${tag} | ${title}`} />
@@ -35,7 +36,7 @@ class TagRoute extends Component {
             </div>
           </div>
         </section>
-      </div>
+      </Layout>
     )
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 import Header from '../components/Header'
 import Gallery from '../components/Photo/Gallery'
 
@@ -12,7 +13,7 @@ export const BirthdayPageTemplate = ({
   header,
   photos,
 }) => (
-  <div>
+  <Layout>
     <Helmet>
       <title>{meta_title}</title>
       <meta name='description' content={meta_description} />
@@ -41,7 +42,7 @@ export const BirthdayPageTemplate = ({
         </div>
       </div>
     </section>
-  </div>
+  </Layout>
 )
 
 BirthdayPageTemplate.propTypes = {
@@ -89,11 +90,11 @@ export const birthdayPage = graphql`
         header
       }
     }
-    allImageSharp(filter: {id: {regex: "/birthday/gallery/"}}) {
+    allImageSharp(filter: {fluid: {originalName: {regex: "/birthday-gallery-/"}}}) {
       edges {
         node {
-          sizes(maxWidth: 800) {
-            ...GatsbyImageSharpSizes
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
       }

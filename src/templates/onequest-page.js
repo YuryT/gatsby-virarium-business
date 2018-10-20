@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {kebabCase} from 'lodash'
-import Link from 'gatsby-link'
+import Layout from '../components/layout'
 import Content, {HTMLContent} from '../components/Content'
 import SE0 from '../components/SEO'
 import Header from '../components/Header'
@@ -18,7 +18,7 @@ export const QuestTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <div>
+    <Layout>
       <SE0
         title={title}
         meta_title={meta_title}
@@ -40,7 +40,7 @@ export const QuestTemplate = ({
           </div>
         </div>
       </section>
-    </div>
+    </Layout>
   )
 }
 

@@ -70,12 +70,12 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    {
-      resolve: `gatsby-plugin-polyfill-io`,
-      options: {
-        features: [`Array.prototype.map`, `Array.prototype.find`, `fetch`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-polyfill-io`,
+    //   options: {
+    //     features: [`Array.prototype.map`, `Array.prototype.find`, `fetch`],
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-feed',
       options: {

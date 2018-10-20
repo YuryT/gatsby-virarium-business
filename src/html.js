@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import favicon from './img/favicon.ico'
 
-let inlinedStyles = '';
+let inlinedStyles = ''
 if (process.env.NODE_ENV === 'production') {
   try {
     /* eslint import/no-webpack-loader-syntax: off */
@@ -19,7 +19,7 @@ export default class HTML extends Component {
       css = (
         <style
           id='gatsby-inlined-css'
-          dangerouslySetInnerHTML={{__html: inlinedStyles}}
+          dangerouslySetInnerHTML={{ __html: inlinedStyles }}
         />
       )
     }
@@ -39,7 +39,7 @@ export default class HTML extends Component {
             dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
-          <script src={__PATH_PREFIX__ + '/js/toggle.js'} />
+          {/*<script src={__PATH_PREFIX__ + '/js/toggle.js'} />*/}
         </body>
       </html>
     )

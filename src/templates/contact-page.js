@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 import Header from '../components/Header'
 import Contact from '../components/Contact/index'
 import config from '../../meta/config'
@@ -12,7 +13,7 @@ export const ContactPageTemplate = ({
   contacts,
 }) => {
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>{meta_title}</title>
         <meta name='description' content={meta_description} />
@@ -33,7 +34,7 @@ export const ContactPageTemplate = ({
           )}
         </div>
       </section>
-    </div>
+    </Layout>
   )
 }
 

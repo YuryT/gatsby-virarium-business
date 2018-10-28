@@ -44,7 +44,6 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {

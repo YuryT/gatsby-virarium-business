@@ -5,13 +5,12 @@ import Layout from '../components/layout'
 import Offerings from '../components/Offerings'
 import Gallery from '../components/Photo/Gallery'
 import Testimonials from '../components/Testimonials'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 export const HomePageTemplate = ({
   title,
   heading,
   description,
-  image,
   offerings,
   meta_title,
   meta_description,
@@ -24,9 +23,14 @@ export const HomePageTemplate = ({
       <meta name='description' content={meta_description} />
     </Helmet>
     <section className='hero is-primary is-bold'>
-      <video id='mainPageVideo' poster={image} style={{width: '100%'}} controls>
-        <source src='/video/fast480.mp4' type='video/mp4' />
-      </video>
+      <iframe
+        width='100%'
+        height='600'
+        src='https://www.youtube.com/embed/Fhdw0pZP8Cs?controls=0'
+        frameBorder='0'
+        allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+        allowFullScreen
+      />
     </section>
     <section className='section section--gradient'>
       <div className='container'>
@@ -80,8 +84,8 @@ HomePageTemplate.propTypes = {
 
 }
 
-const HomePage = ({data}) => {
-  const {frontmatter} = data.markdownRemark
+const HomePage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
   const photos = data.allImageSharp.edges
 
   return (
@@ -89,7 +93,6 @@ const HomePage = ({data}) => {
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
-      image={frontmatter.image}
       heading={frontmatter.heading}
       description={frontmatter.description}
       offerings={frontmatter.offerings}
@@ -116,7 +119,6 @@ export const pageQuery = graphql`
         title
         meta_title
         meta_description
-        image
         heading
         description
         offerings {

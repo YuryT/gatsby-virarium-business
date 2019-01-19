@@ -28,6 +28,13 @@ nav
 
 @import "~bulma"
 
+.home-video-iframe
+  @include until($desktop)
+    height: 150px
+
+  @include from($tablet)
+    height: 600px
+
 
 .header-virarium
     background-position: center

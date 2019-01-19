@@ -24,8 +24,8 @@ export const HomePageTemplate = ({
     </Helmet>
     <section className='hero is-primary is-bold'>
       <iframe
+        className='home-video-iframe'
         width='100%'
-        height='600'
         src='https://www.youtube.com/embed/Fhdw0pZP8Cs?controls=0'
         frameBorder='0'
         allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'

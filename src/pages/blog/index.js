@@ -6,6 +6,8 @@ import Layout from '../../components/layout'
 import PostCard from '../../components/PostCard'
 import Header from '../../components/Header'
 
+import config from '../../../meta/config'
+
 export default class BlogPage extends Component {
   render () {
     const { data } = this.props
@@ -18,6 +20,17 @@ export default class BlogPage extends Component {
         </Helmet>
         <Header title='Новости нашего клуба' />
         <section className='section'>
+          <div style={{ textAlign: 'center' }} className='container'>
+            <div className='title is-4'>
+              Cамые свежие новости и актуальные новости можно найти в нашей группе &nbsp;
+              <a href={config.vk} target='_blank'>vk.com/virarium</a>
+            </div>
+          </div>
+        </section>
+        <section className='section'>
+          <div style={{ textAlign: 'center' }} className='title is-4'>
+            Важные новости
+          </div>
           <PostCard posts={posts} />
         </section>
       </Layout>

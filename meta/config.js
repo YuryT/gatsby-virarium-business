@@ -19,5 +19,6 @@ module.exports = {
   email: 'virarium-vrn@yandex.ru',
   phone: '+79003096765',
   vk: 'https://vk.com/virarium',
+  vkMe: 'https://vk.me/virarium',
   instagram: 'https://www.instagram.com/virarium_vr_club/',
 }

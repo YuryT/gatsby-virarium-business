@@ -29,11 +29,33 @@ nav
 @import "~bulma"
 
 .home-video-iframe
-  @include until($desktop)
-    height: 150px
+  height: 50vh
+//.home-video-iframe
+//  @include until($desktop)
+//    height: 150px
+//
+//  @include from($tablet)
+//    height: 600px
 
-  @include from($tablet)
-    height: 600px
+
+.home-page-hero
+  height: 80vh
+
++desktop
+  .home-page-hero
+    background-position: 100% 50%
+    background-size: 100%
+
+  .HomePage-boyImage
+    height: 115vh
+
+  //height: 80vw
+
++mobile
+  .HomePage-boyImage
+    //fix columns margin
+    padding: 0
+    height: 0
 
 
 .header-virarium

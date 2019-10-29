@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://virarium.ru/quests/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/other-services/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/pricing/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/quests/minority-report/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/quests/valkyrie/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/blog/ekograd2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/business/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/blog/den-goroda2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/blog/site-start/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/birthday/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/faq/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/tags/vr-на-выезде/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/tags/vr-зона-на-мероприятии/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/tags/новости-клуба/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://virarium.ru/tags/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/quests/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/other-services/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/quests/minority-report/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/quests/valkyrie/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/pricing/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/blog/den-goroda2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/business/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/blog/ekograd2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/blog/site-start/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/birthday/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/faq/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/tags/vr-на-выезде/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/tags/vr-зона-на-мероприятии/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/tags/новости-клуба/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://virarium.ru/&#039;/gatsby-virarium-business&#039;/tags/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

@@ -1,0 +1,12 @@
+{
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map",
+  "static/TheBlu-Encounter.jpg": "static/TheBlu-Encounter-bb22f1d45ce97653a8cf37d69bb835f0.jpg",
+  "static/favicon.ico": "static/favicon-03f6938d5ac8064551e2c58d4102faf4.ico",
+  "static/jumbotron2.jpg": "static/jumbotron2-5ad47aae12355d55c86bcb408d88ba08.jpg",
+  "static/logo.svg": "static/logo-ff249c4299fce08e677e5b03a74404b8.svg",
+  "static/logoW.svg": "static/logoW-ea065e3968e10600c68d4910207f3cd1.svg",
+  "static/payday-2-vr-vive.jpg": "static/payday-2-vr-vive-8e02fe33b3c352ecdcb85758448349ea.jpg",
+  "static/test games.png": "static/test games-2cdb73b8970ef949e4c9ce1a0c404efb.png",
+  "static/vive_studio_boy.png": "static/vive_studio_boy-781c58c92d4a1d467d4fa1ae5e8b74d2.png"
+}

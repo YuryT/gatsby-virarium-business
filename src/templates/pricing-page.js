@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Header from '../components/Header'
-import Pricing from '../components/Pricing'
+import Pricing from '../components/Pricing/Pricing'
 
 export const PricingPageTemplate = ({
   title,
@@ -21,7 +21,7 @@ export const PricingPageTemplate = ({
     </Helmet>
     <Header title={title} />
     <Pricing data={pricing_solo} />
-    <div className='hero is-primary'>
+    <div className='hero'>
       <Pricing data={pricing_group} />
     </div>
     <div className='hero'>
@@ -36,7 +36,7 @@ export const PricingPageTemplate = ({
         </div>
       </div>
     </div>
-    <div className='hero is-primary'>
+    <div className='hero'>
       <Pricing data={pricing_cert} />
     </div>
   </Layout>
@@ -106,6 +106,8 @@ export const pricingPageQuery = graphql`
             description
             plan
             price
+            priceW
+            isRecommended
           }
         }
         pricing_group {
@@ -115,6 +117,8 @@ export const pricingPageQuery = graphql`
             description
             plan
             price
+            priceW
+            scale
           }
         }
         pricing_cert {

@@ -43,7 +43,7 @@ export const HomePageTemplate = ({
                 <h1 className='title'>
                    Kлуб виртуальной реальности
                 </h1>
-                <h4 className='subtitle is-4'> Твое погружение в будущее </h4>
+                <h4 className='subtitle is-4'> Погрузись в бесконечность </h4>
               </div>
             </div>
           </div>

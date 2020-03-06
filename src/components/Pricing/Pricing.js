@@ -24,9 +24,8 @@ const Pricing = ({ data }) => (
                     </h4>
                     <h5 className='title has-text-centered is-size-5'>
                       {plan.priceW ?
-                        `Будни - ${plan.price}р / Выходные - ${plan.priceW}р`
-                        : `${plan.price}р`}
-
+                        (<><div>{plan.price}</div><div>{plan.priceW}</div></>)
+                        : `${plan.price}`}
                     </h5>
                   </div>
                   <div className='virariumPlan-body'>

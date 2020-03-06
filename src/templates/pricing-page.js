@@ -9,9 +9,7 @@ export const PricingPageTemplate = ({
   title,
   meta_title,
   meta_description,
-  loyal_program,
   pricing_solo,
-  pricing_group,
   pricing_cert,
 }) => (
   <Layout>
@@ -21,24 +19,7 @@ export const PricingPageTemplate = ({
     </Helmet>
     <Header title={title} />
     <Pricing data={pricing_solo} />
-    <div className='hero'>
-      <Pricing data={pricing_group} />
-    </div>
-    <div className='hero'>
-      <div className='section'>
-        <h2 className='has-text-weight-semibold is-size-2' style={{textAlign: 'center'}}>
-          Программа лояльности
-        </h2>
-        <div className='columns'>
-          <div className='column is-10 is-offset-1'>
-            <div className='content' style={{ fontSize: '1.4em' }} dangerouslySetInnerHTML={{ __html: loyal_program }} />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className='hero'>
-      <Pricing data={pricing_cert} />
-    </div>
+    <Pricing data={pricing_cert} />
   </Layout>
 )
 
@@ -46,17 +27,12 @@ PricingPageTemplate.propTypes = {
   title: PropTypes.string,
   meta_title: PropTypes.string,
   meta_description: PropTypes.string,
-  loyal_program: PropTypes.string,
   pricing_solo: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
     plans: PropTypes.array,
   }),
-  pricing_group: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+
   pricing_cert: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
@@ -73,9 +49,7 @@ const PricingPage = ({data}) => {
       title={frontmatter.title}
       meta_title={frontmatter.meta_title}
       meta_description={frontmatter.meta_description}
-      loyal_program={frontmatter.loyal_program}
       pricing_solo={frontmatter.pricing_solo}
-      pricing_group={frontmatter.pricing_group}
       pricing_cert={frontmatter.pricing_cert}
     />
   )
@@ -98,7 +72,6 @@ export const pricingPageQuery = graphql`
         title
         meta_title
         meta_description
-        loyal_program
         pricing_solo {
           heading
           description
@@ -108,17 +81,6 @@ export const pricingPageQuery = graphql`
             price
             priceW
             isRecommended
-          }
-        }
-        pricing_group {
-          heading
-          description
-          plans {
-            description
-            plan
-            price
-            priceW
-            scale
           }
         }
         pricing_cert {

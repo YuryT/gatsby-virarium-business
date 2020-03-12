@@ -33,6 +33,7 @@ export default class HTML extends Component {
           {this.props.headComponents}
           <link rel='shortcut icon' href={favicon} />
           {css}
+          <script src="//code.jivosite.com/widget/UBV9V4WSc3" async></script>
         </head>
         <body>
           <div

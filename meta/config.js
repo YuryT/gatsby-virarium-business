@@ -13,11 +13,11 @@ module.exports = {
   userTwitter: 'virarium',
   userLocation: 'TODO',
   userDescription: '',
-  copyright: 'Copyright © 2019 ViRarium VR club.', // Copyright string for the footer of the website and RSS feed.
+  copyright: 'Copyright © 2020 ViRarium VR club.', // Copyright string for the footer of the website and RSS feed.
   themeColor: '#003a83', // Used for setting manifest and progress theme colors.
   backgroundColor: '#ffffff', // Used for setting manifest background color.
   email: 'virarium-vrn@yandex.ru',
-  phone: '+79003096765',
+  phone: '+7(900) 309 67 65',
   vk: 'https://vk.com/virarium',
   vkMe: 'https://vk.me/virarium',
   instagram: 'https://www.instagram.com/virarium_vr_club/',

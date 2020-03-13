@@ -43,6 +43,9 @@ class NavBar extends Component {
               <img src={logo} alt='ViRarium' style={{width: '125px'}} />
             </figure>
           </Link>
+          <a href={`tel:${config.phone}`} className='navbar-item header-phone-mobile is-hidden-desktop'>
+            {config.phone}
+          </a>
           <button className='button navbar-burger' data-target='navMenu' onClick={this.toggleMenu}>
             <span />
             <span />
@@ -56,15 +59,18 @@ class NavBar extends Component {
                 {l.text}
               </Link>
             ))}
+            <a href={`tel:${config.phone}`} className='navbar-item header-phone is-hidden-desktop-only'>
+              {config.phone}
+            </a>
           </div>
           <div className='navbar-end'>
             <div className='navbar-item'>
               <div className='field is-grouped'>
                 <p className='control'>
-                  <a href={config.vk} target='_blank'>
+                  <a href={config.vk} target='_blank' style={{verticalAlign: 'middle'}}>
                     <img src={vk_logo} alt='vk' style={{width: '50px'}}/>
                   </a>
-                  <a href={config.instagram} target='_blank'>
+                  <a href={config.instagram} target='_blank' style={{verticalAlign: 'middle'}}>
                     <img src={instagram_logo} alt='vk' style={{width: '50px'}}/>
                   </a>
                   <Link
